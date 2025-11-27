@@ -1,5 +1,5 @@
 {% set name = "omero-marshal" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/omero_marshal-{{ version }}.tar.gz
-  sha256: 5d88d0cc1d2360863ccc06156c7e69910ed10013e3ff731662d574d54b0faf11
+  sha256: 6aff867b6854da26477c465d01465a0466959aa6a4ffc58563e7e8cbb77e44ac
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
